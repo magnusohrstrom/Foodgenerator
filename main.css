@@ -4,6 +4,9 @@
   width:400px;
   border: 2px solid black;
 }
+#checkbox{
+  color:white;
+}
 #header{
   height: 80px;
   width: 100%;
@@ -14,11 +17,18 @@
   font-size: 26px;
 
 }
-
+#button{
+  height: 50px;
+  width: 100px;
+}
 
 #mainDiv{
   background-color: salmon;
-  height: 500px;
+  height: 100px;
   width: 100%;
 
+}
+#coursediv{
+  height: 400px;
+  width:400px;
 }
