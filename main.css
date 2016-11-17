@@ -6,29 +6,53 @@
 }
 #checkbox{
   color:white;
+  font-size: 25px;
+
+
 }
 #header{
-  height: 80px;
+  height: 170px;
   width: 100%;
-  background-color: teal;
+  background-color: #EBECED;
   text-align: center;
-  color: white;
-  padding-top: 30px;
-  font-size: 26px;
+  color: #FB4096;
+  padding-top: 60px;
+  font-size: 30px;
+  font-family: Futura;
 
 }
 #button{
-  height: 50px;
+  height: 20px;
   width: 100px;
+  color: white;
+  background-color: grey;
+  border:0;
+  font-family: Helvetica;
+  clear:both;
+  align-self: center;
+
 }
 
 #mainDiv{
-  background-color: salmon;
-  height: 100px;
+  background-color: black;
+  color:white;
+  padding-top: 10px;
+  height: 260px;
   width: 100%;
-
+  font-family: Futura;
+  font-size: 26px;
 }
 #coursediv{
   height: 400px;
   width:400px;
+}
+#courseP{
+  font-size: 36px;
+  color:white;
+  text-decoration: none;
+}
+
+#a{
+  font-size: 18px;
+
 }

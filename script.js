@@ -1,5 +1,7 @@
-var arrCourses = [];
+/////////////Magnus Foodgenerator////////////////////////
 
+///////////////////////Creates array of objects/////////////////////////
+var arrCourses = [];
 
 //Course constructor.
 function Course(str, isVeggie, url) {
@@ -23,83 +25,36 @@ var steak = new Course("Grillad Entrecote med kryddsmör.");
 addCourse(kolbulle);
 addCourse(springroll);
 addCourse(haloumi);
+
+
+//////////////////////////Functionality//////////////////////////////////
+
 //Button to generate.
 var button = document.getElementById('button');
 
 button.addEventListener("click", generateRandomCourse);
 
 
-
-
-
 //Function for button to gererate a course-log.
 function generateRandomCourse() {
   var checkBoxValue = document.getElementById('checkbox').checked;
-  var p = document.getElementById('courseP');
-  if (checkBoxValue === false) {
+  var a = document.getElementById('courseP');
+//If user is not veggie. Gets random object from arrCourses.
+  if(checkBoxValue === false) {
     var i = Math.floor(Math.random() * arrCourses.length);
-
-    p.innerHTML = arrCourses[i].str;
+    a.innerHTML = arrCourses[i].str;
+    a.href = arrCourses[i].url;
   }
+  //If user checks
   else if(checkBoxValue === true){
-
-    for(var j = Math.floor(Math.random() * arrCourses.length);j<arrCourses.length;j++){
-            if(arrCourses[j].isVeggie){
-              p.innerHTML = arrCourses[j].str;
-            }
-            break;
-    /*
-var loop = true;
-    while(loop){
+      var loop = true;
+      while(loop){
       var j = Math.floor(Math.random() * arrCourses.length);
       if(arrCourses[j].isVeggie){
-        p.innerHTML = arrCourses[j].str;
+        a.innerHTML = arrCourses[j].str;
+        a.href = arrCourses[j].url;
       }
-      loop=false;*/
-
-
+      loop=false;
     }
-
-/*
-
-        }*/
-
-
-
-
-
-
   }
 }
-
-
-    //"Regular alternative"
-
-    //Veggie alternative.
-    /*
-else if(checkBoxValue) {
-      console.log("hej");*/
-
-
-      /*
-
-      var j = Math.floor(Math.random() * arrCourses.length);
-      var loop = true;
-      for(j in arrCourses){
-        if(arrCourses[j].veggieTrue===true){
-          var k = document.getElementById('courseP');
-          k.innerHTML = arrCourses[j].str;
-
-        }
-      */
-
-
-
-
-//Function that creates element for food course.
-/*
-function createElement() {
-    var i = Math.floor(Math.random() * arrCourses.length);
-    var p = document.getElementById('courseP');
-    p.innerHTML = arrCourses[i].str;
-}*/
