@@ -48,14 +48,10 @@ button.addEventListener("click", generateRandomCourse);
 
 var styleButton1 = document.getElementById('style1');
 styleButton1.addEventListener('click', setStyle1);
-
 var styleButton2 = document.getElementById('style2');
 styleButton2.addEventListener('click', setStyle2);
 var styleButton3 = document.getElementById('style3');
 styleButton3.addEventListener('click', setStyle3);
-
-
-
 
 //Function for button to gererate a course-log.
 function generateRandomCourse() {
@@ -63,23 +59,33 @@ function generateRandomCourse() {
   var a = document.getElementById('courseP');
 //If user is not veggie. Gets random object from arrCourses.
   if(checkBoxValue === false) {
-    var i = Math.floor(Math.random() * arrCourses.length);
+    var i = randomIndex();
     a.innerHTML = arrCourses[i].str;
-    a.href = arrCourses[i].url;
+    a.href = arrCourses[i].url;;
   }
   //If user checks
   else if(checkBoxValue === true){
       var loop = true;
       while(loop){
-      var j = Math.floor(Math.random() * arrCourses.length);
-      if(arrCourses[j].isVeggie){
-        a.innerHTML = arrCourses[j].str;
-        a.href = arrCourses[j].url;
+      var i = randomIndex();
+      if(arrCourses[i].isVeggie){
+        a.innerHTML = arrCourses[i].str;
+        a.href = arrCourses[i].url;
         loop=false;
       }
-
     }
   }
+}
+
+//Function that creates random Index number.
+function randomIndex(){
+  var randomIndex = Math.floor(Math.random() * arrCourses.length);
+  return randomIndex;
+}
+//Function that sets the random course to the html-element.
+function setCourse(ind){
+  a.innerHTML = arrCourses[ind].str;
+  a.href = arrCourses[ind].url;
 }
 //Function that sets style.
 function setStyle1(){
